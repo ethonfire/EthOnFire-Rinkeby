@@ -1,0 +1,525 @@
+<html>
+    <head>
+        <title>ETH OnFire Rinkeby</title>
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar navbar-style navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header"> 
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href=""><img class="logo" src="./img/logo_rinkeby.png"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="micon"> <!-- id is data target for the collapse call above -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#winners">Past Winners</a></li>
+                            <li><a href="https://github.com/ethonfire/EthOnFire-Rinkeby">More Info</a></li>
+                            <li id="navbuy"><a href="#navbuy">Buy</a></li>
+                            <li id="navrandom"><a href="#navrandom">Request Random</a></li>
+                            <li id="navburn"><a href="#navburn">Burn</a></li>
+                            <li id="navwithdraw"><a href="#navwithdraw">withdraw</a></li>
+                        </ul>   
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid bg-1 text-center" id="splash" style="margin-top: 123px;">
+                    <img src="./img/brand_rinkeby.png" class="img-responsive">
+            </div>
+
+            <div class="container-fluid bg-1 text-center" style="margin-top: 24px; margin-bottom: 90px;">
+                    <a class="btn btn-first" >Buy Ticket</a>
+                    <a class="btn btn-second">Request Random</a>
+                    <a class="btn btn-third">Burn</a>
+            </div>
+            <div class="well">
+                <div class="row">
+                    <div class="col-sm-4 col-price"><h4><b>Ticket Price: <br>12 ETH</b></h4></div>
+                    <div class="col-sm-4 col-prize"><h4><b>Estimated Prize: <br>~2.34 ETH</b></h4></div>
+                    <div class="col-sm-4 col-tickets"><h4><b>Tickets Remaining: <br>1 of 3000</b></h4></div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-12 col-hashtitle"><h3><b></b>Salt Hash</b></h3></div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-12 col-hash"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-banner"><h5><b>This is some banner text</b></h5></div>
+                </div>
+            </div>
+
+            <!-- Bootstrap 4.1.1 Snippet by siddharth4753 -->
+            <div  id="about" class="container">
+                <h3><b>About</b></h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-timeline">
+                            <a class="timeline">
+                                <div class="timeline-icon"><i class="glyphicon glyphicon-qrcode"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Hash and Price Set</h3>
+                                    <p class="description">
+                                        A hash containing a salt number is submitted and the price for a single ticket is set by the onFire team. After the hash and price are set, tickets are open for sale.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="timeline">
+                                <div class="timeline-icon"><i class="glyphicon glyphicon-usd"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Tickets Open for Purchase</h3>
+                                    <p class="description">
+                                        Tickets are open for purchase, (about) $1. There is no limit on the amount of tickets but be aware only 30% of the pot will be used for the prize.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="timeline">
+                                <div class="timeline-icon"><i class="glyphicon glyphicon-random"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Request Random Number</h3>
+                                    <p class="description">
+                                        A user requests a random number to pick the winner and gets the price of a ticket. Excess gas is consumed by oraclize and request button has 30 min cool down.
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="timeline">
+                                <div class="timeline-icon"><i class="glyphicon glyphicon-ok"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Hash Reveal</h3>
+                                    <p class="description">
+                                        The number secured in the hash is revealed. The revealed number from the hash will be used to salt the random number to protect from bad actors.
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="#" class="timeline">
+                                <div class="timeline-icon"><i class="glyphicon glyphicon-fire"></i></div>
+                                <div class="timeline-content">
+                                    <h3 class="title">Burn</h3>
+                                    <p class="description">
+                                        The burn function caller and Request Random function caller get the price of a ticket, onFire team gets 1%, and main winner gets 30%. Remaining coins are <b>burned.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="well well-lg" id="winners" style="margin-top:124px"><h3><b>Past Winners</b></h3>
+                <div class="table-responsive">         
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Address</th>
+                              <th>Amount</th>
+                              <th>Salt Hash</th>
+                              <th>Revealed Hash</th>
+                            </tr>
+                          </thead>
+                          <tbody id="past_winners_table">
+                          </tbody>
+                        </table>
+                </div>
+            </div>
+            <footer class="text-center">
+                    <div class="row"><div class="page-footer footer-buy"><a class="page-footer" href="https://github.com/ethonfire/EthOnFire-Rinkeby"><p>Eth OnFire, 2018</p></a></div></div>
+                    <div class="row"><div class="page-footer footer-random"><a class="page-footer" href="https://ethonfire.github.io/EthOnFire/"><p>Live on Mainnet: https://ethonfire.github.io/EthOnFire/</p></a></div></div>
+                    <div class="row"><div class="page-footer footer-burn"><a class="page-footer" href="https://github.com/BonfireEth/Bonfire-15-I"><p>Credit: Bonfire Dapp - JS and game design</p></a></div></div>
+                    <div class="row"><div class="page-footer footer-withdraw"><a class="page-footer" href="https://bootsnipp.com/snippets/Q0ppE"><p>Credit: siddharth4753 - bootstrap timeline</p></a></div></div>
+            </footer>
+        </header>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+        <script>
+            var maxnum = 3000;
+            var ticketPrice;
+            var winnerHistoryCounter;
+            var newWinner;
+        
+            if (typeof web3 != 'undefined') 
+            {
+                web3 = new Web3(web3.currentProvider);
+            } else 
+            {
+                console.log("MetaMask Needed");
+            }
+
+            var Fireplace = web3.eth.contract([{"constant":true,"inputs":[],"name":"senderHolderAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"precommitHash","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"burnWallet","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"prizeAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"reward","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pastWinnerCounter","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"messageOut","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"ticketCounter","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"value","type":"uint256"}],"name":"setPrice","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"stage3","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"price","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"oracleRandomNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"secretHash","type":"bytes32"}],"name":"submitSecretHash","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"incinerate","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"stage4","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"pastWinners","outputs":[{"name":"incinerationTime","type":"uint256"},{"name":"queries","type":"bytes32"},{"name":"winnersAddress","type":"address"},{"name":"prizeAmount","type":"uint256"},{"name":"preHash","type":"bytes32"},{"name":"postTxtOne","type":"string"},{"name":"secretNumber","type":"uint256"},{"name":"postTxtTwo","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"pastWinners","outputs":[{"name":"incinerationTime","type":"uint256"},{"name":"winnersAddress","type":"address"},{"name":"prizeAmount","type":"uint256"},{"name":"preHash","type":"bytes32"},{"name":"postTxtOne","type":"string"},{"name":"secretNumber","type":"uint256"},{"name":"postTxtTwo","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"saltNum","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"stage6","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"ignite","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"burned","type":"uint256"}],"name":"IncinerationComplete","type":"event"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"txt","type":"string"}],"name":"Reader","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"txt","type":"string"},{"indexed":false,"name":"secretHash","type":"bytes32"}],"name":"SaltHashSet","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"val","type":"uint256"}],"name":"NewPrice","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"ticketsLeft","type":"uint256"}],"name":"TicketSold","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"secretHash","type":"bytes32"},{"indexed":false,"name":"textOne","type":"string"},{"indexed":false,"name":"secretNum","type":"uint256"},{"indexed":false,"name":"textTwo","type":"string"}],"name":"RevealedHash","type":"event"}]);
+            var fplace = Fireplace.at('0x289f9bee36a3fb871915ef26d0cac00f77ecdb34');
+            console.log(fplace);
+
+/*******************
+Pulsing Buttons
+**********************/
+
+           fplace.stage3.call(function (err, result) 
+                { 
+                if (!err) 
+                {
+                    if (result == true)
+                    {
+                        $('.btn-first').addClass('pulse'); 
+                        $('.btn-second').removeClass('pulse'); 
+                        $('.btn-third').removeClass('pulse'); 
+                    }
+                    console.log(result);
+                }
+            });
+
+            fplace.stage4.call(function (err, result) 
+                { 
+                if (!err) 
+                {
+                    if (result == true)
+                    {
+                        $('.btn-first').removeClass('pulse'); 
+                        $('.btn-second').addClass('pulse'); 
+                        $('.btn-third').removeClass('pulse'); 
+                    }
+                    console.log(result);
+                }
+            });
+
+            fplace.stage6.call(function (err, result) 
+                { 
+                if (!err) 
+                {
+                    if (result == true)
+                    {
+                        $('.btn-first').removeClass('pulse'); 
+                        $('.btn-second').removeClass('pulse'); 
+                        $('.btn-third').addClass('pulse'); 
+                    }
+                    console.log(result);
+                }
+            });
+
+
+/*******************
+Buy Button
+**********************/
+            $(".btn-first, #navbuy").click(function() 
+            { 
+                web3.eth.sendTransaction({from:web3.eth.defaultAccount, to:fplace.address, value:web3.toWei((ticketPrice / 1000000000000000000), "ether"), gas:200000}, (err, res) => {
+                    if (err) 
+                    {
+                        console.log(err);
+                    }
+                });
+
+            });
+
+/*******************
+Request Button
+**********************/
+            $(".btn-second, #navrandom").click(function() 
+            {
+                fplace.ignite({from:web3.eth.defaultAccount, gas:500000}, (err, res) => 
+                {
+                    if (err) 
+                    {
+                        console.log(err);
+                    }
+                });
+            });
+
+/*******************
+Burn Button
+**********************/
+            $(".btn-third, #navburn").click(function() 
+            {
+                fplace.incinerate({from:web3.eth.defaultAccount, gas:250000}, (err, res) => 
+                {
+                    if (err) 
+                    {
+                        console.log(err);
+                    }
+                });
+            });
+
+/*******************
+Withdraw
+**********************/
+            $("#navwithdraw").click(function() 
+            {
+                fplace.withdraw({from:web3.eth.defaultAccount, gas:200000}, (err, res) => 
+                {
+                    if (err) 
+                    {
+                        console.log(err);
+                    }
+                });
+            });
+
+/*******************
+Current Ticket Price
+**********************/
+            fplace.price.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    ticketPrice = result;
+                    console.log(ticketPrice);
+                    $(".col-price").html("<h4><b>Current Price: " + "<br>" + (result / 1000000000000000000) + "ETH</b></h4>");
+                    $(".col-prize").html("<h4><b>Estimated Prize: " + "<br>" + (((result / 1000000000000000000) * maxnum) * 0.3) + "ETH</b></h4>");
+                    console.log(result);
+                }
+            });
+            
+            var currentPrice = fplace.NewPrice();
+            currentPrice.watch(function(error, result) 
+            {
+                if (!error) 
+                {
+                    ticketPrice = result.args.val;
+                    console.log(ticketPrice);
+                    $(".col-price").html("<h4><b>Current Price: " + "<br>" + (result.args.val / 1000000000000000000) + "ETH</b></h4>");
+                    $(".col-prize").html("<h4><b>Estimated Prize: " + "<br>" + (((result.args.val / 1000000000000000000) * maxnum) * 0.3) + "ETH</b></h4>");
+                    $('.btn-first').addClass('pulse'); 
+                    $('.btn-second').removeClass('pulse'); 
+                    $('.btn-third').removeClass('pulse'); 
+                    console.log(result.args.val);
+                } else 
+                {
+                    console.log(error);
+                }
+            });
+
+/*******************
+Tickets left
+**********************/
+            fplace.ticketCounter.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    $(".col-tickets").html("<h4><b>Tickets Remaining:  " + "<br>" + (maxnum - result) + " of " + maxnum + "</b></h4>");
+                    console.log(result);
+                }
+            });
+
+            var seatsLeft = fplace.TicketSold();
+            seatsLeft.watch(function(error, result) 
+            {
+                if (!error) 
+                {
+                    $(".col-tickets").html("<h4><b>Tickets Remaining:  " + "<br>" + (maxnum - result.args.ticketsLeft) + " of " + maxnum + "</b></h4>");
+                    if ((maxnum - result.args.ticketsLeft) == 0) 
+                    {
+                        $('.btn-first').removeClass('pulse'); // remove pulse
+                        $('.btn-second').addClass('pulse'); // pulse the Request button
+                        $('.btn-third').removeClass('pulse'); 
+                    }
+                    console.log(result.args.seatsLeft);
+                } else {
+                    console.log(error);
+                }
+            });
+
+/*******************
+Reader 
+**********************/
+            fplace.messageOut.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    $(".col-banner").html(result);
+                    console.log(result);
+                }
+            });
+
+            var newReader = fplace.Reader();
+            newReader.watch(function(error, result) 
+            {
+                if (!error) 
+                {
+                    $(".col-banner").html(result.args.txt);
+                    if (result.args.txt == "Waiting for salt reveal.") 
+                    {
+                        $('.btn-second').removeClass('pulse'); 
+                    } 
+                    if (result.args.txt == "Coins burned. Between rounds please wait.") 
+                    {
+                        $('.btn-first').removeClass('pulse'); 
+                        $('.btn-second').removeClass('pulse'); 
+                        $('.btn-third').removeClass('pulse'); 
+                    }
+                    console.log(result);
+                } 
+            });
+
+
+
+/************************
+Salt Hash
+****************************/
+            fplace.precommitHash.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    $(".col-hash").html("Salt hash: " + result);
+                    console.log(result);
+                }
+            });
+
+            var commithash = fplace.SaltHashSet();
+            commithash.watch(function(error, result) 
+            {
+                if (!error) 
+                {
+                    $(".col-hash").html("Salt hash: " + result.args.secretHash); 
+                    $(".col-banner").html("A new hash has been set"); 
+                    console.log(result.args.secretHash);
+                } else 
+                {
+                    console.log(error);
+                }
+            });
+            
+/************************
+Reveal Salt Hash
+****************************/
+            var revealhash = fplace.RevealedHash();
+            revealhash.watch(function(error, result) 
+            {
+                if (!error) 
+                {
+                    $(".col-banner").html("The revealed salt hash: " + result.args.textOne + "" + result.args.secretNum + "" + result.args.textTwo + " Salt: " + result.args.secretNum); // txt hash num
+                    console.log(result.args.secretHash + ": " + result.args.textOne + " " + result.args.secretNum + " " + result.args.textTwo);
+                    $('.btn-first').removeClass('pulse'); 
+                    $('.btn-second').removeClass('pulse'); 
+                    $('.btn-third').addClass('pulse'); 
+                } else 
+                {
+                    console.log(error);
+                }
+            });
+
+/******************
+Getting past winners
+******************/
+            fplace.pastWinnerCounter.call(function (error, result) 
+            { 
+
+                if (!error) {
+                    winnerHistoryCounter = result;
+                    console.log(result);
+                    var pastTenWinners;
+                    if (winnerHistoryCounter <= 9) 
+                    {
+                        pastTenWinners = 0;
+                    } else 
+                    {
+                        pastTenWinners = winnerHistoryCounter - 10;
+                    }
+                    while (pastTenWinners <= (winnerHistoryCounter - 1)) 
+                    {
+                        fplace.pastWinners.call(pastTenWinners, function (err, res) 
+                        { 
+                            if (!err) 
+                            {
+                                var timestamp = res[0];
+                                var date = new Date(timestamp * 1000);
+                                console.log(res[0]);
+                                date = new Date(timestamp * 1000);
+                                $("#past_winners_table").append('<tr id="winner_row' + timestamp.toString() + '"></tr>');
+                                $('#winner_row' + timestamp.toString()).html("<td>" + date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate()+ "</td> <td>" + res[2] + "</td><td>" + (res[3] / 1000000000000000000) + " ETH </td><td>" + res[4] + "</td><td>" + res[5]  + " <br>" + res[6] + "<br>" +res[7] + "</td>");
+                            }
+                        });
+                        
+                        pastTenWinners += 1;
+                    }
+                }
+            });
+
+            ///////DYNAMIC UPDATE OF THE WINNERS LIST/////////////
+            
+            var beenincinerated = fplace.IncinerationComplete();
+            beenincinerated.watch(function(error, result) 
+            { 
+                if (!error) 
+                {
+                    $('.btn-third').removeClass('pulse'); // remove pulse
+                    fplace.pastWinnerCounter.call(function (erro, rez) 
+                    { 
+                        if (!erro) 
+                        {
+                            winnerHistoryCounter = rez;
+                            console.log(rez);
+                        }
+                    });
+
+                    fplace.pastWinners.call(winnerHistoryCounter, function (err, res) 
+                    { 
+                        if (!err) 
+                        {
+                            var timestamp = res[0];
+                            var date = new Date(timestamp * 1000);
+                            console.log(res[0]);
+                            date = new Date(timestamp * 1000);
+                            $("#past_winners_table").append('<tr id="winner_row' + timestamp.toString() + '"></tr>');
+                            $('#winner_row' + timestamp.toString()).html("<td>" + date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate()+ "</td> <td>" + res[2] + "</td><td>" + (res[3] / 1000000000000000000) + " ETH </td><td>" + res[4] + "</td><td>" + res[5]  + " <br>" + res[6] + "<br>" +res[7] + "</td>");
+
+                        }
+                    })
+                }
+            });
+
+            fplace.stage3.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    console.log(result);
+                    if (result) 
+                    {
+                        $('.btn-first').addClass('pulse');
+                    }
+                }
+            });
+
+            fplace.stage4.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    console.log(result);
+                    if (result) 
+                    {
+                        $('.btn-second').addClass('pulse');
+                    }
+                }
+            });
+
+            fplace.stage6.call(function (err, result) 
+            { 
+                if (!err) 
+                {
+                    console.log(result);
+                    if (result) 
+                    {
+                        $('.btn-third').addClass('pulse');
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
+
