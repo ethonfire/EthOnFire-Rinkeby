@@ -28,6 +28,14 @@ var baz = contract.GiftDeposited({}, {fromBlock: 0, toBlock: 'latest'});
 baz.watch(function(error, result){console.log(result.args.giftRecipient + " " + result.args.amount)});
 
 ```
+##### Request Random Number
+```
+contract.ignite({from: your.address, gas: 1000000})
+```
+##### Burn Request
+```
+contract.incinerate({from: your.address, gas: 1000000})
+```
 
 # More Info
 1. The OnFire team submits a salt number by way of a hash. The salt number modifies the random number from oraclize to protect against the possibility of a bad actor on the random number generation contract. The salt number is submitted before a round is opened and cannot be changed, because in order to reveal the salt number the hashes must match. 
